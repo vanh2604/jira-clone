@@ -66,7 +66,7 @@ const Login = () => {
         <div className="login-content">
           <form onSubmit={formik.handleSubmit}>
             <img src="img/avatar.svg" alt="" />
-            <h2 className="title">LOGIN CYBERBUGSK</h2>
+            <h2 className="title">LOGIN CYBERBUG</h2>
             <div ref={inputRef1} className="input-div one">
               <div className="i">
                 <i className="fas fa-user"></i>
