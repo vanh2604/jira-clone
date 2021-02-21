@@ -1,0 +1,31 @@
+// user
+export const SIGN_IN_API = 'SIGN_IN_API';
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';
+export const GET_USER_LIST = 'GET_USER_LIST';
+
+// loading
+export const IS_LOADING = 'IS_LOADING';
+export const LOADING_DONE = 'LOADING_DONE';
+
+// project
+export const PROJECT_CATEGORY_API = 'PROJECT_CATEGORY_API';
+export const GET_PROJECT_CATEGORY = 'GET_PROJECT_CATEGORY';
+export const CREATE_PROJECT_API = 'CREATE_PROJECT_API';
+export const CREATE_PROJECT = 'CREATE_PROJECT';
+export const GET_ALL_PROJECTS = 'GET_ALL_PROJECTS';
+export const SET_PROJECT_EDIT = 'SET_PROJECT_EDIT';
+export const UPDATE_PROJECT_API = 'UPDATE_PROJECT_API';
+export const DELETE_PROJECT_API = 'DELETE_PROJECT_API';
+export const ADD_MEMBER_API = 'ADD_MEMBER_API';
+export const REMOVE_MEMBER_API = 'REMOVE_MEMBER_API';
+export const GET_PROJECT_DETAIL = 'GET_PROJECT_DETAIL';
+export const GET_PROJECT_DETAIL_API = 'GET_PROJECT_DETAIL_API';
+
+// drawer
+export const OPEN_DRAWER = 'OPEN_DRAWER';
+export const CLOSE_DRAWER = 'CLOSE_DRAWER';
+export const OPEN_DRAWER_COMPONENT = 'OPEN_DRAWER_COMPONENT';
+export const SET_CALLBACK = 'SET_CALLBACK';
+// history
+export const ADD_HISTORY = 'ADD_HISTORY';

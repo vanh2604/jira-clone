@@ -1,10 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import KanbanBoard from '../../components/kanban-board/KanbanBoard';
 
 const Home = () => {
   return (
     <div>
-      <Redirect to="/login" />
+      <KanbanBoard />
     </div>
   );
 };

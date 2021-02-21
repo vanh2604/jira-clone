@@ -1,20 +1,30 @@
-import React from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
-import FlashMessage from './components/FlashMessage';
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
-import Signup from './pages/SignUp/Signup';
-import { UserLoginSignUp } from './template/UserLoginSignUp';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import DrawerHOC from './components/DrawerHOC/DrawerHOC';
+import LoadingComponent from './components/loading/Loading';
+import { ADD_HISTORY } from './constant/type';
+import Authenticated from './pages/Authenticated/Authenticated';
+import Unauthenticated from './pages/Unauthenticated/Unauthenticated';
 
 function App() {
+  const { user } = useSelector((state) => state.userLoginReducer);
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({
+      type: ADD_HISTORY,
+      payload: history,
+    });
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <UserLoginSignUp exact path="/login" Component={Login} />
-        <UserLoginSignUp exact path="/signup" Component={Signup} />
-      </Switch>
-    </BrowserRouter>
+    <>
+      <LoadingComponent />
+      <DrawerHOC />
+      {user ? <Authenticated /> : <Unauthenticated />}
+    </>
   );
 }
 

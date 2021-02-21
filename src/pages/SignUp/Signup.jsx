@@ -21,57 +21,62 @@ const Signup = () => {
   return (
     <div>
       <div className="login">
-        <img class="wave" src="img/wave.png" alt="" />
-        <div class="container">
-          <div class="img">
+        <img className="wave" src="img/wave.png" alt="" />
+        <div className="container">
+          <div className="img">
             <img src="./img/bg.svg" alt="" />
           </div>
-          <div class="login-content">
+          <div className="login-content">
             <form>
               <img src="img/avatar.svg" alt="" />
-              <h2 class="title">Sign Up CYBERBUGS</h2>
-              <div ref={inputRef1} class="input-div one">
-                <div class="i">
-                  <i class="fas fa-lock"></i>
+              <h2 className="title">Sign Up CYBERBUGS</h2>
+              <div ref={inputRef1} className="input-div one">
+                <div className="i">
+                  <i className="fas fa-lock" />
                 </div>
-                <div class="div">
+                <div className="div">
                   <h5>Name</h5>
-                  <input onClick={onFocus1} type="password" class="input" />
+                  <input onClick={onFocus1} type="password" className="input" />
                 </div>
               </div>
-              <div ref={inputRef2} class="input-div one">
-                <div class="i">
-                  <i class="fas fa-user"></i>
+              <div ref={inputRef2} className="input-div one">
+                <div className="i">
+                  <i className="fas fa-user" />
                 </div>
-                <div class="div">
+                <div className="div">
                   <h5>Email</h5>
-                  <input onClick={onFocus2} type="text" class="input" name="email" />
+                  <input
+                    onClick={onFocus2}
+                    type="text"
+                    className="input"
+                    name="email"
+                  />
                 </div>
               </div>
-              <div ref={inputRef3} class="input-div one">
-                <div class="i">
-                  <i class="fas fa-lock"></i>
+              <div ref={inputRef3} className="input-div one">
+                <div className="i">
+                  <i className="fas fa-lock" />
                 </div>
-                <div class="div">
+                <div className="div">
                   <h5>phone number</h5>
-                  <input onClick={onFocus3} type="text" class="input" />
+                  <input onClick={onFocus3} type="text" className="input" />
                 </div>
               </div>
-              <div ref={inputRef4} class="input-div pass">
-                <div class="i">
-                  <i class="fas fa-lock"></i>
+              <div ref={inputRef4} className="input-div pass">
+                <div className="i">
+                  <i className="fas fa-lock" />
                 </div>
-                <div class="div">
+                <div className="div">
                   <h5>Password</h5>
                   <input
                     onClick={onFocus4}
                     type="password"
-                    class="input"
+                    className="input"
                     name="password"
                   />
                 </div>
               </div>
-              <input type="submit" class="btn" value="Sign Up" />
+              <input type="submit" className="btn" value="Sign Up" />
             </form>
           </div>
         </div>
