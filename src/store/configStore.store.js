@@ -8,6 +8,7 @@ import userLoginReducer from './reducers/userLogin.reducer';
 import projectReducer from './reducers/project.reducer';
 import drawerReducer from './reducers/drawer.reducer';
 import userReducer from './reducers/user.reducer';
+import projectDetail from './reducers/projectDetail.reducer';
 // middleware saga
 import rootSaga from './saga/rootSaga';
 
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   projectReducer,
   drawerReducer,
   userReducer,
+  projectDetail,
 });
 
 const middlewareSaga = createMiddlewareSaga();

@@ -7,6 +7,8 @@ import {
   DELETE_PROJECT_API,
   GET_ALL_PROJECTS,
   GET_PROJECT_CATEGORY,
+  GET_PROJECT_DETAIL,
+  GET_PROJECT_DETAIL_API,
   IS_LOADING,
   LOADING_DONE,
   PROJECT_CATEGORY_API,
@@ -133,4 +135,25 @@ function* removeMember({ payload }) {
 
 export function* watchRemoveMember() {
   yield takeLatest(REMOVE_MEMBER_API, removeMember);
+}
+
+function* getProjectDetail({ projectId }) {
+  try {
+    yield put({ type: IS_LOADING });
+    const { data } = yield call(() =>
+      projectService.getProjectDetail(projectId)
+    );
+    if (data) {
+      yield put({ type: GET_PROJECT_DETAIL, payload: data.content });
+      yield put({ type: LOADING_DONE });
+    }
+  } catch (error) {
+    yield put({ type: LOADING_DONE });
+    const { history } = yield select((state) => state.historyReducer);
+    history.push(ROUTE.PROJECT_MANAGEMENT);
+  }
+}
+
+export function* watchGetProjectDetail() {
+  yield takeLatest(GET_PROJECT_DETAIL_API, getProjectDetail);
 }

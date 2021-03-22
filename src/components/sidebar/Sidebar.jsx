@@ -1,6 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { OPEN_DRAWER_COMPONENT } from '../../constant/type';
+import FormCreateTask from '../FormCreateTask/FormCreateTask';
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   return (
     <div className="sideBar">
       <div className="sideBar-top">
@@ -16,7 +22,20 @@ const Sidebar = () => {
           <i className="fa fa-search" />
           <span className="title">SEARCH ISSUES</span>
         </div>
-        <div className="sideBar-icon">
+        <div
+          onClick={() => {
+            dispatch({
+              type: OPEN_DRAWER_COMPONENT,
+              payload: {
+                isVisible: true,
+                title: 'Create task',
+                Component: <FormCreateTask />,
+              },
+            });
+          }}
+          className="sideBar-icon"
+          style={{ cursor: 'pointer' }}
+        >
           <i className="fa fa-plus" />
           <span className="title">CREATE ISSUES</span>
         </div>

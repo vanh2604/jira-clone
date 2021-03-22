@@ -12,7 +12,7 @@ const Menu = () => {
     <div className="menu">
       <div className="account">
         <div className="avatar">
-          <img src="./img/download.jfif" alt="" />
+          <img src="/img/download.jfif" alt="" />
         </div>
         <div className="account-info">
           <p>CyberLearn.vn</p>
@@ -29,7 +29,7 @@ const Menu = () => {
               color: '#000',
               fontWeight: 400,
             }}
-            to={ROUTE.HOME}
+            to={ROUTE.PROJECT}
             activeClassName="active font-weight-bold text-primary"
           >
             Kanban Board
@@ -44,7 +44,7 @@ const Menu = () => {
               color: '#000',
               fontWeight: 400,
             }}
-            to={ROUTE.PROJECT}
+            to={ROUTE.CREATE_PROJECT}
             activeClassName="active font-weight-bold  text-primary"
           >
             Create project

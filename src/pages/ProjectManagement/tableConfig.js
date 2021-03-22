@@ -10,6 +10,7 @@ import {
   AutoComplete,
   Input,
 } from 'antd';
+import { NavLink } from 'react-router-dom';
 import {
   OPEN_DRAWER_COMPONENT,
   SET_PROJECT_EDIT,
@@ -48,6 +49,10 @@ export const columnConfig = (
           return -1;
         }
         return 1;
+      },
+      // eslint-disable-next-line no-unused-vars
+      render: (text, record, index) => {
+        return <NavLink to={`/project/${record?.id}`}>{text}</NavLink>;
       },
     },
     {

@@ -5,6 +5,7 @@ import {
   watchDeleteProject,
   watchGetAllProject,
   watchGetProjectCategory,
+  watchGetProjectDetail,
   watchRemoveMember,
   watchUpdateProject,
 } from './projectAction';
@@ -22,6 +23,7 @@ function* rootSaga() {
     watchGetAllUsers(),
     watchAddMember(),
     watchRemoveMember(),
+    watchGetProjectDetail(),
   ]);
 }
 

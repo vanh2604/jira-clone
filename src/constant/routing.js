@@ -1,7 +1,8 @@
 export const ROUTE = {
-  HOME: '/home',
+  PROJECT_DETAIL: '/project/:projectId',
+  PROJECT: '/project',
   LOGIN: '/login',
   SIGN_UP: '/signup',
-  PROJECT: '/creat-project',
+  CREATE_PROJECT: '/creat-project',
   PROJECT_MANAGEMENT: '/project-management',
 };
